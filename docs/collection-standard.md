@@ -10,16 +10,16 @@ The concept of the Collection Metadata program is to provide decorator structs t
 
 The NFT Token Standard `Metadata` struct is extended with a key `collection` which points to a map with the following fields:
 
-| Field | Type | Description | Display suggestions | 
-| ------ | ----- | ------------- | ---------------------- | 
-| assets | array | append only array of NFT addresses | single NFT view, resolving links to specific NFTs |
+| Field     | Type  | Description                                                                | Display suggestions                               | 
+| --------- | ----- | -------------------------------------------------------------------------- | ------------------------------------------------- | 
+| assets    | array | append only array of NFT addresses                                         | single NFT view, resolving links to specific NFTs |
 | member_of | array | array of Membership Maps displaying the collections the NFT is a member of | single NFT view, resolving links to specific NFTs |
 
 #### Membership Map
 
-| Field | Type | Description | Display suggestions | 
-| ------ | ----- | ------------- | ---------------------- | 
-| address | string | collection address | single NFT view, links to collection and resolved collection name |
+| Field     | Type   | Description                                 | Display suggestions                                                                | 
+| --------- | ------ | ------------------------------------------- | ---------------------------------------------------------------------------------- | 
+| address   | string | collection address                          | single NFT view, links to collection and resolved collection name                  |
 | signature | string | a hash of the NFT, signed by the collection | single NFT view, resolves collection public key and verifies validity of signature |
 
 ### Ownership
