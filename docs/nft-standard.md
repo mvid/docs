@@ -41,7 +41,7 @@ The file below should be used as a reference.
 
 ### JSON Structure
 
-```
+```json
 {
   "name": "Solflare X NFT",
   "symbol": "",
@@ -64,10 +64,6 @@ The file below should be used as a reference.
       "value": "yes"
 	}
   ],
-  "collection": {
-     "name": "Solflare X NFT",
-     "family": "Solflare"
-  },
   "properties": {
     "files": [
       {
@@ -132,21 +128,6 @@ If you wish to provide additional hosting for your files to provide users a bett
 ```
 
 If such a flag exists, that file is the primary option when selecting the multimedia-attachment (video, audio or 3D) that will be displayed to owners. If that file is no longer available, you wallet should default to it using the URL in `animation_url` field.
-
-#### Collections
-
-If the NFT belongs to a group of other unique NFTs, you can mark them with an additional `collection` field that contains the name of the collection.
-
-```
-  "collection": {
-		"name": "Pigs on Solana Season #1",
-		"family": "Pigs on Solana"
-	}
-```
-
-`collection.family` represents the larger set of NFTs your asset can belong to, in the case you are making multiple variations on a theme. It should always be a unique identifier of your whole project and never a general term like "cars", "art" or similar.
-
-You wallet should be able to group NFTs belonging to the same family and display the collection name on a single NFT view.
 
 #### Additional attributes specification
 
