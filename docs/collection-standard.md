@@ -11,7 +11,7 @@ The concept of the Collection Metadata program is to provide decorator structs t
 Your wallet should be using the following information from the on-chain metadata. The [NFT Token Standard extension section](#nft-token-standard-extension) will explain how.
 
 | Field       | Type                                     | Description                                                                                             | 
-| ----------- | ---------------------------------------- | ------------------------------------------------------------------------------------------------------- | 
+| --- | --- | --- | 
 | name        | string                                   | name of the collection                                                                                  | 
 | description | string                                   | short description of the collection                                                                     |
 | members     | array<address>                           | an array of address of tokens or sub-collections belonging to this collection                           |
@@ -23,13 +23,13 @@ Your wallet should be using the following information from the on-chain metadata
 The NFT Token Standard `Metadata` struct is extended with a key `collection` which points to a map with the following fields:
 
 | Field     | Type                                     | Description                                                                                   | Display suggestions                               | 
-| --------- | ---------------------------------------- | --------------------------------------------------------------------------------------------- | ------------------------------------------------- | 
+| --- | --- | --- | --- | 
 | member_of | array<[Membership Map](#membership-map)> | array of [Membership Map](#membership-map) displaying the collections the NFT is a member of  | single NFT view, resolving links to specific NFTs |
 
 ### Membership Map
 
 | Field     | Type   | Description                                 | Display suggestions                                                                     | 
-| --------- | ------ | ------------------------------------------- | --------------------------------------------------------------------------------------- | 
+| --- | --- | --- | --- | 
 | address   | string | collection address                          | single NFT view, links to collection and resolved collection name                       |
 | signature | string | a hash of the NFT, signed by the collection | single NFT view, resolves with collection public key and verifies validity of signature |
 
